@@ -26,6 +26,7 @@ function Search(){
             
             obj = list.items.map(item => 
             <>
+               
                 <div className="objects">
                     <a className="displayLink" href={item.link}>{item.displayLink}</a>
                     <div>
@@ -38,7 +39,11 @@ function Search(){
             
             )
             return (
-            <><div>
+            <>
+             <div className="searchInfo">
+                    <p>About {list.searchInformation.formattedTotalResults} results ({list.searchInformation.formattedSearchTime}s)</p>
+                </div>
+            <div>
                     {obj}
                 </div>
                 <div className="footer">

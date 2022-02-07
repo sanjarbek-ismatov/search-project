@@ -108,3 +108,8 @@ img{
     border: 0.1px solid #303030;
 
 }
+.searchInfo{
+    font-size: 14px;
+    color: #303030;
+    margin-top: 5px;
+}
