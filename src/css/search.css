@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: arial, Helvetica, sans-serif;
 }
-#root{
+#main{
     width: 100%;
     min-height: 100vh;
     background-color: #ffffff;
@@ -48,7 +48,7 @@ img{
     font-size: 13px;
 }
 .link{
-    font-size: 25px;
+    font-size: 22px;
     text-decoration: none;
     line-height: 35px;
     color: #2c2cb1;
@@ -73,8 +73,38 @@ img{
     }
     .main{
         margin: 0 20px;
+        font-size: 17px;
     }
     .link{
         font-size: 23px;
     }
+}
+.footer{
+    text-align: center;
+    width: 100%;
+    color: #303030;
+    font-size: 15px;
+    padding: 30px 0;
+}
+.fixed{
+    position: fixed;
+    top: 0.1rem;
+    left: 7rem;
+    width: 300px;
+
+}
+#button{
+    padding: 7px 25px;
+    color: #fff;
+    background-color: #303030;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#button:hover, #button:active{
+    background-color: #fff;
+    color: #303030;
+    border: 0.1px solid #303030;
+
 }

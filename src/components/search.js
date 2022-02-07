@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import '../css/search.css';
 import Logo from './images/logo.png';
 function Search(){
@@ -16,7 +16,6 @@ function Search(){
             .then(data => {
                 setList(data);
                 setUse(true);
-                console.log(data)
             });
             document.title = `${text} - MySearch`;
         }
@@ -34,17 +33,28 @@ function Search(){
                         <p className="desc">{item.snippet}</p>
                     </div>
                 </div>
+
             </>
             
             )
             return (
-            <div>
-                {obj}
-            </div>
+            <><div>
+                    {obj}
+                </div>
+                <div className="footer">
+                        <p>Barcha huquqlar himoyalangan!</p>
+                        <p>Sanjarbek Ismatov 2022 ©</p>
+                    </div></>
             )
         }
         else if(!use){
-            return ''
+            return (
+                <>
+                    <div className="objects">
+                        <p>Search with MySearch</p>
+                    </div>
+                </>
+            )
         }
     }
     return (
@@ -59,7 +69,11 @@ function Search(){
                     
                 </div>
                 <Working />
+                <div className="fixed">
+                    <button onClick={() => {window.location.href = 'https://t.me/sanjarbek_ismatov/'}} id="button">View Telegram</button>
+                </div>
             </div>
+            
         </>
     )
 }
